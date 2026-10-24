@@ -1,0 +1,44 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: #f3ece4;
+  background: #0b0a10;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.app {
+  position: relative;
+  width: 100vw;
+  height: 100dvh;
+}
+
+/* Hand all touch gestures to the 3D controls instead of page scroll/zoom. */
+.graph-canvas {
+  touch-action: none;
+}
+
+.title {
+  position: absolute;
+  top: max(16px, env(safe-area-inset-top));
+  left: max(16px, env(safe-area-inset-left));
+  right: max(16px, env(safe-area-inset-right));
+  pointer-events: none;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: 0.3em;
+}
